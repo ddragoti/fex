@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM sconecuratedimages/crosscompilers:ubuntu16.04
 
 MAINTAINER Oleksii Oleksenko (oleksii.oleksenko@tu-dresden.de)
 
