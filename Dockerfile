@@ -37,12 +37,16 @@ RUN list=( /usr/lib/linux-tools/*-generic/perf ) && \
 # setup the environment
 ENV LD_LIBRARY_PATH=/lib:/usr/lib64:/usr/lib/:/usr/local/lib64/:/usr/local/lib/:$LD_LIBRARY_PATH \
     DATA_PATH=/data/ \
-    PROJ_ROOT=/root/code/fex/ \
+    PROJ_ROOT=/root/code/fex \
     BIN_PATH=/root/bin/
 
 RUN mkdir -p /root/bin/benchmarks
 
+# sources
+COPY ./ ${PROJ_ROOT}
+RUN chmod -R 755 ${PROJ_ROOT}/install
+
 # == Interface ==
-VOLUME /root/code/fex/
+VOLUME /data
 WORKDIR ${PROJ_ROOT}
 ENTRYPOINT ["/bin/bash"]

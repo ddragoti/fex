@@ -14,7 +14,7 @@ class PhoenixPerf(Runner):
 
     benchmarks = {
         "histogram": "{input_dir}/input/small.bmp {thread}",
-        "kmeans": "-d 5 -c 100 -p 30000 -s 30000 -t {thread}",
+        "kmeans": "-d 5 -c 100 -p 30000 -s 30000 {thread}",
         "linear_regression": "{input_dir}/input/key_file_100MB.txt {thread}",
         "matrix_multiply": "1500 1 {thread}",
         "pca": " -r 3000 -c 2500 -t {thread}",
@@ -24,7 +24,7 @@ class PhoenixPerf(Runner):
 
     test_benchmarks = {
         "histogram": "{input_dir}/input/small.bmp  {thread}",
-        "kmeans": "-d 2 -c 10 -p 100 -s 100 -t {thread}",
+        "kmeans": "-d 2 -c 10 -p 100 -s 100 {thread}",
         "linear_regression": "{input_dir}/input/key_file_50MB.txt {thread}",
         "matrix_multiply": "15 1 {thread}",
         "pca": " -r 30 -c 30 -t {thread}",
