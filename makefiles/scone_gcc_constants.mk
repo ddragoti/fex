@@ -4,7 +4,7 @@
 OBJ_EXT := o
 
 # make constants
-CC  = scone-gcc
+CC  = scone-gcc 
 CXX = scone-g++
 LD  := ld
 LDRELOC := -r

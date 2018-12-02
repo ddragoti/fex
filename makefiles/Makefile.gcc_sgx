@@ -1,4 +1,0 @@
-include sgx-gcc_constants.mk
-include common.mk
-
-CCFLAGS += -O2
