@@ -32,6 +32,7 @@ class Config(AbstractConfig):
     # measurement tools
     stats_action = {
         "perf": "perf stat -e cycles -e instructions",
+        "timer": "/root/code/fex/scone-perf/profiler/timer /data/results/profiler.log 1024k",
         "time": "/usr/bin/time --verbose",
         "none": "",
     }
@@ -70,7 +71,7 @@ class Config(AbstractConfig):
     # Results aggregation (what means to calculate)
 
     # the format is as follows:
-    # type: (what column to aggregate, what columns to keep untouched)
+    # type: what
     aggregated_data = {
         "perf": (["time"], ["compiler", "type", "name", "input", "threads"]),
         "mem": (["maxsize"], ["compiler", "type", "name", "input", "threads"]),

@@ -12,7 +12,7 @@ build:
 	@$(DOCKER) build --rm=true -t $(IMG_NAME) .
 
 run:
-	@$(DOCKER_RUN) --privileged=true --name=$(CONTAINER_NAME) $(IMG_NAME)
+	@$(DOCKER_RUN) --privileged=true --device=/dev/isgx --name=$(CONTAINER_NAME) $(IMG_NAME)
 
 run_network:
 	@$(DOCKER_RUN) --network=host -p 8080:8080 --privileged=true --name=$(CONTAINER_NAME) $(IMG_NAME)
