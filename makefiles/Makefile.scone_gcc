@@ -1,4 +1,4 @@
 include scone_gcc_constants.mk
 include common.mk
 
-CCFLAGS += -O3
+CCFLAGS += -O2

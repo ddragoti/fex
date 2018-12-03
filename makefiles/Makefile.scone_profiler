@@ -1,6 +1,6 @@
 include scone_gcc_constants.mk
 include common.mk
 
-CCFLAGS += -static -Wall -O3 -w -D_GNU_SOURCE -D__PROFILER_MULTITHREADED -finstrument-functions -include/root/code/fex/scone-perf/profiler/profiler.h 
+CCFLAGS += -static -Wall -O2 -g -w -D_GNU_SOURCE -D__PROFILER_MULTITHREADED -finstrument-functions -include/root/code/fex/scone-perf/profiler/profiler.h 
 LIB_DIRS += /root/code/fex/scone-perf/profiler
 LIBS += -lprofiler
