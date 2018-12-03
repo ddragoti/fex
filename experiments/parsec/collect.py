@@ -7,5 +7,5 @@ from core import collect
 
 
 def main():
-    res_path = os.environ['PROJ_ROOT'] + '/results/parsec/raw.csv'
+    res_path = os.environ['DATA_PATH'] + '/results/parsec/raw.csv'
     collect.collect("parsec", result_file=res_path)
