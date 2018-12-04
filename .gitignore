@@ -68,3 +68,5 @@ scripts/mng
 
 # ignore statistics - it is changed each time a plot is generated
 *.stats.csv
+
+scone-perf/
